@@ -1,6 +1,6 @@
-# Data Analytics Internship Projects — Week 1, Week 2 & Week 3
+# Data Analytics Internship Projects — Week 1, Week 2, Week 3 & Week 4
 
-This repository contains my internship assignments focused on **data cleaning, preprocessing, exploratory data analysis, visualization, and unsupervised machine learning using Python**.
+This repository contains my internship assignments focused on **data cleaning, preprocessing, exploratory data analysis, visualization, unsupervised learning, and supervised machine learning using Python**.
 
 ## 📌 Week 1 — Data Acquisition, Cleaning & Preprocessing
 
@@ -14,7 +14,6 @@ Acquire a reliable public dataset, investigate its quality, clean inconsistencie
 
 ### Work completed
 - Dataset acquisition and initial inspection
-- Data type and structure analysis
 - Missing-value identification and treatment
 - Handling of `?` missing-value markers
 - Duplicate and consistency checks
@@ -26,83 +25,95 @@ Acquire a reliable public dataset, investigate its quality, clean inconsistencie
 - Discussion of preprocessing impact and data leakage
 
 ### Week 1 Files
-- `week1_data_cleaning.py` — reproducible Python cleaning/preprocessing workflow
-- `requirements.txt` — required Python packages
-- `Week_1_Data_Acquisition_Cleaning_Preprocessing_Report.docx` — detailed report
+- `week1_data_cleaning.py`
+- `requirements.txt`
+- `Week_1_Data_Acquisition_Cleaning_Preprocessing_Report.docx`
 
 ---
 
 ## 📊 Week 2 — Exploratory Data Analysis & Visualization
 
 ### Objective
-Perform exploratory data analysis on a public dataset and use Python visualizations to identify trends, relationships, patterns, distributions, and potential anomalies.
+Explore a public dataset and use Python visualizations to identify trends, relationships, distributions, patterns, and potential anomalies.
 
 ### Dataset
 - **Dataset:** Iris Dataset
 - **Original source:** UCI Machine Learning Repository
-- **Dataset reference:** Fisher, R. A. (1936), *The use of multiple measurements in taxonomic problems*
-- The analysis uses the dataset distributed through `scikit-learn` for reproducibility.
+- **Reference:** Fisher, R. A. (1936), *The use of multiple measurements in taxonomic problems*
+- Distributed through `scikit-learn` for reproducibility.
 
 ### Work completed
 - Dataset structure and quality inspection
 - Descriptive statistics
 - Species/class distribution analysis
 - Grouped mean calculations
-- Sepal and petal scatter plots
-- Grouped bar-chart comparison
-- Box-plot distribution analysis
+- Scatter plots, bar charts, box plots, histograms
 - Correlation analysis
-- Petal-length distribution analysis
 - IQR-based anomaly screening
 - Interpretation of patterns and relationships
 
-### Key Week 2 Findings
-- The dataset contains **150 observations** across **3 balanced species classes**.
-- There are **no missing values** in the Iris dataset.
-- Petal length and petal width provide strong visual separation between species.
-- Setosa is the most clearly separated class.
-- Versicolor and virginica show more overlap than setosa.
-- Petal length and petal width have a strong positive relationship.
-
 ### Week 2 Files
-- `week2_eda_visualization.py` — reproducible EDA and visualization script
-- `week2_requirements.txt` — Week 2 Python dependencies
-- `Week_2_Exploratory_Data_Analysis_and_Visualization_Report.docx` — detailed EDA report
+- `week2_eda_visualization.py`
+- `week2_requirements.txt`
+- `Week_2_Exploratory_Data_Analysis_and_Visualization_Report.docx`
 
 ---
 
 ## 🤖 Week 3 — Unsupervised Learning & Clustering Analysis
 
 ### Objective
-Apply an unsupervised machine-learning technique to discover meaningful groups in a public dataset and interpret the characteristics of the resulting clusters.
-
-### Dataset
-- **Dataset:** Iris Dataset
-- **Source:** UCI-origin Iris dataset distributed through `scikit-learn`
-- **Observations:** 150
-- **Features:** sepal length, sepal width, petal length, petal width
+Apply unsupervised machine learning to discover meaningful groups and interpret their characteristics.
 
 ### Methodology
-- Loaded and inspected the numerical features
-- Standardized features using `StandardScaler`
-- Evaluated candidate cluster counts from **k = 2 to 8**
-- Used the **Elbow Method** and **Silhouette Score** to select the number of clusters
-- Applied **K-Means clustering** with `k = 3`
-- Visualized clusters using **PCA**
-- Profiled the average characteristics of each cluster
-- Performed post-hoc comparison with known species labels for interpretation only
-
-### Key Week 3 Findings
-- A three-cluster solution provides a meaningful segmentation of the Iris observations.
-- Petal length and petal width are especially important in distinguishing the clusters.
-- One cluster is characterized by relatively small petal measurements, while the other clusters contain progressively larger petal measurements.
-- The PCA visualization shows reasonably separated groups and their centroids.
-- The known species labels were **not used to train K-Means**, preserving the unsupervised-learning setup.
+- Standardized numerical features using `StandardScaler`
+- Evaluated k = 2 through 8
+- Used the Elbow Method and Silhouette Score
+- Applied K-Means with k = 3
+- Visualized clusters using PCA
+- Profiled cluster characteristics
+- Used known species labels only for post-hoc interpretation
 
 ### Week 3 Files
-- `week3_clustering_analysis.py` — reproducible K-Means clustering workflow
-- `week3_requirements.txt` — Week 3 Python dependencies
-- `Week_3_Unsupervised_Learning_and_Clustering_Analysis_Report.docx` — detailed clustering report
+- `week3_clustering_analysis.py`
+- `week3_requirements.txt`
+- `Week_3_Unsupervised_Learning_and_Clustering_Analysis_Report.docx`
+
+---
+
+## 🎯 Week 4 — Supervised Learning Model Implementation
+
+### Objective
+Build and evaluate a supervised classification model that predicts Iris species from flower measurements.
+
+### Problem Definition
+This is a **three-class classification problem**. The predictors are sepal length, sepal width, petal length, and petal width. The target is the Iris species.
+
+### Models
+- **Logistic Regression** — primary interpretable baseline
+- **Random Forest** — nonlinear comparison model
+
+### Methodology
+- Created an 80/20 stratified train/test split
+- Applied `StandardScaler` to Logistic Regression through a pipeline
+- Used 5-fold stratified cross-validation
+- Evaluated accuracy, precision, recall, and F1-score
+- Generated confusion matrices
+- Compared model performance
+- Analyzed Random Forest feature importance
+- Discussed strengths, limitations, and possible improvements
+
+### Key Week 4 Findings
+- Both models provide strong classification performance on the Iris dataset.
+- Logistic Regression provides a simple and interpretable baseline.
+- Random Forest provides a flexible nonlinear alternative and feature-importance estimates.
+- Petal-related measurements are particularly useful for distinguishing the species.
+- Cross-validation was used to check that model performance was not dependent on a single train/test split.
+- Scaling was kept inside the Logistic Regression pipeline to reduce preprocessing leakage.
+
+### Week 4 Files
+- `week4_supervised_learning.py` — reproducible classification workflow
+- `week4_requirements.txt` — Week 4 dependencies
+- `Week_4_Supervised_Learning_Model_Implementation_Report.docx` — detailed supervised-learning report
 
 ---
 
@@ -120,7 +131,6 @@ Apply an unsupervised machine-learning technique to discover meaningful groups i
 week1-data-cleaning-preprocessing/
 │
 ├── README.md
-│
 ├── week1_data_cleaning.py
 ├── requirements.txt
 ├── Week_1_Data_Acquisition_Cleaning_Preprocessing_Report.docx
@@ -131,7 +141,11 @@ week1-data-cleaning-preprocessing/
 │
 ├── week3_clustering_analysis.py
 ├── week3_requirements.txt
-└── Week_3_Unsupervised_Learning_and_Clustering_Analysis_Report.docx
+├── Week_3_Unsupervised_Learning_and_Clustering_Analysis_Report.docx
+│
+├── week4_supervised_learning.py
+├── week4_requirements.txt
+└── Week_4_Supervised_Learning_Model_Implementation_Report.docx
 ```
 
 ## ▶️ How to Run the Projects
@@ -154,12 +168,18 @@ pip install -r week3_requirements.txt
 python week3_clustering_analysis.py
 ```
 
+### Week 4
+```bash
+pip install -r week4_requirements.txt
+python week4_supervised_learning.py
+```
+
 ## 📚 Project Purpose
 
-These projects demonstrate practical data-analytics and machine-learning skills, including data acquisition, data quality assessment, preprocessing, exploratory analysis, visualization, statistical interpretation, clustering, model evaluation, and reproducible Python workflows.
+These projects demonstrate practical data-analytics and machine-learning skills, including data acquisition, data quality assessment, preprocessing, exploratory analysis, visualization, clustering, supervised classification, model validation, evaluation, interpretation, and reproducible Python workflows.
 
 ## 👤 Author
 
 **Rizwan Saifi**
 
-Data Analytics Internship — Week 1, Week 2 & Week 3
+Data Analytics Internship — Week 1, Week 2, Week 3 & Week 4
