@@ -1,62 +1,140 @@
-# Week 1 — Data Cleaning and Preprocessing
+# Data Analytics Internship Projects — Week 1 & Week 2
 
-## Project Overview
-This project demonstrates a complete data acquisition, exploration, cleaning, and preprocessing workflow using the **UCI Adult Census Income Dataset**.
+This repository contains my first two internship assignments focused on **data cleaning, preprocessing, exploratory data analysis (EDA), and data visualization using Python**.
 
-The work focuses on preparing a reliable dataset for subsequent statistical analysis and machine learning. The project documents missing-value handling, consistency checks, duplicate inspection, outlier analysis, categorical encoding, numerical scaling, and final validation.
+## 📌 Week 1 — Data Acquisition, Cleaning & Preprocessing
 
-## Dataset
-- **Dataset:** Adult (Census Income)
+### Objective
+Acquire a reliable public dataset, investigate its quality, clean inconsistencies, handle missing values and outliers, and prepare the data for further analysis and machine learning.
+
+### Dataset
+- **Dataset:** UCI Adult Census Income Dataset
 - **Source:** UCI Machine Learning Repository
-- **URL:** https://archive.ics.uci.edu/dataset/2/adult
-- **Task:** Prepare the dataset for further analysis and modelling.
+- **Dataset page:** https://archive.ics.uci.edu/dataset/2/adult
 
-## Technologies
+### Work completed
+- Dataset acquisition and initial inspection
+- Data type and structure analysis
+- Missing-value identification and treatment
+- Handling of `?` missing-value markers
+- Duplicate and consistency checks
+- Domain-validity checks
+- IQR-based outlier analysis
+- Categorical encoding strategy
+- Numerical scaling strategy
+- Final data-quality validation
+- Discussion of preprocessing impact and data leakage
+
+### Week 1 Files
+- `week1_data_cleaning.py` — reproducible Python cleaning/preprocessing workflow
+- `requirements.txt` — required Python packages
+- `Week_1_Data_Acquisition_Cleaning_Preprocessing_Report.docx` — detailed report
+
+---
+
+## 📊 Week 2 — Exploratory Data Analysis & Visualization
+
+### Objective
+Perform exploratory data analysis on a public dataset and use Python visualizations to identify trends, relationships, patterns, distributions, and potential anomalies.
+
+### Dataset
+- **Dataset:** Iris Dataset
+- **Original source:** UCI Machine Learning Repository
+- **Dataset reference:** Fisher, R. A. (1936), *The use of multiple measurements in taxonomic problems*
+- The analysis uses the dataset distributed through `scikit-learn` for reproducibility.
+
+### Work completed
+- Dataset structure and quality inspection
+- Descriptive statistics
+- Species/class distribution analysis
+- Grouped mean calculations
+- Sepal scatter-plot analysis
+- Petal scatter-plot analysis
+- Grouped bar-chart comparison
+- Box-plot distribution analysis
+- Correlation analysis
+- Petal-length distribution analysis
+- IQR-based anomaly screening
+- Critical interpretation of patterns and relationships
+- Discussion of limitations and implications for future modelling
+
+### Key Week 2 Findings
+- The dataset contains **150 observations** across **3 balanced species classes**.
+- There are **no missing values** in the Iris dataset.
+- Petal length and petal width provide strong visual separation between species.
+- Setosa is the most clearly separated class.
+- Versicolor and virginica show more overlap than setosa.
+- Petal length and petal width have a strong positive relationship.
+- Sepal width has weaker relationships with the other numerical measurements.
+
+### Week 2 Files
+- `week2_eda_visualization.py` — reproducible EDA and visualization script
+- `week2_requirements.txt` — Week 2 Python dependencies
+- `Week_2_Exploratory_Data_Analysis_and_Visualization_Report.docx` — detailed EDA report
+
+---
+
+## 🛠️ Technologies Used
+
 - Python
 - Pandas
 - NumPy
 - Matplotlib
 - Scikit-learn
-- ucimlrepo
+- ucimlrepo (Week 1)
 
-## Project Structure
+## 📁 Repository Structure
+
 ```text
 week1-data-cleaning-preprocessing/
+│
 ├── README.md
+│
 ├── week1_data_cleaning.py
 ├── requirements.txt
-└── Week_1_Data_Acquisition_Cleaning_Preprocessing_Report.docx
+├── Week_1_Data_Acquisition_Cleaning_Preprocessing_Report.docx
+│
+├── week2_eda_visualization.py
+├── week2_requirements.txt
+└── Week_2_Exploratory_Data_Analysis_and_Visualization_Report.docx
 ```
 
-## Main Steps
-1. Acquire the public dataset from UCI.
-2. Inspect dataset structure, data types, and distributions.
-3. Standardize column names and text values.
-4. Convert source missing markers such as `?` to proper missing values.
-5. Investigate missing values and duplicates.
-6. Perform domain-specific validity checks.
-7. Handle missing categorical and numerical values.
-8. Detect numerical outliers using the IQR method.
-9. Normalize the target variable.
-10. Prepare categorical encoding and numerical scaling using Scikit-learn.
-11. Run final validation checks.
+## ▶️ How to Run the Projects
 
-## Key Cleaning Decisions
-Missing categorical values are represented using an explicit `Unknown` category where appropriate. Numerical missing values are treated with median imputation when required. Statistical outliers are flagged for investigation rather than automatically deleted, because unusual observations may still be legitimate records.
+### Week 1
 
-## Report
-The detailed DOCX report contains the methodology, Python code snippets, explanations, challenges, preprocessing rationale, impact on future analysis, and a complete reproducible script.
+Install the required packages:
 
-## Reproducibility
-Install dependencies with:
 ```bash
 pip install -r requirements.txt
 ```
 
-Then run:
+Run the script:
+
 ```bash
 python week1_data_cleaning.py
 ```
 
-## Author
-Rizwan Saifi
+### Week 2
+
+Install the Week 2 dependencies:
+
+```bash
+pip install -r week2_requirements.txt
+```
+
+Run the EDA script:
+
+```bash
+python week2_eda_visualization.py
+```
+
+## 📚 Project Purpose
+
+These projects demonstrate practical data-analytics skills including data acquisition, data quality assessment, preprocessing, descriptive analysis, visualization, interpretation, and reproducible Python workflows.
+
+## 👤 Author
+
+**Rizwan Saifi**
+
+Data Analytics Internship — Week 1 & Week 2
