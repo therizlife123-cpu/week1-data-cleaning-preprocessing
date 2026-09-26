@@ -1,6 +1,6 @@
-# Data Analytics Internship Projects — Week 1 to Week 5
+# Data Analytics Internship Projects — Week 1 to Week 6
 
-This repository contains my internship assignments focused on **data cleaning, preprocessing, exploratory data analysis, visualization, unsupervised learning, supervised machine learning, and deep learning using Python**.
+This repository contains my internship assignments focused on **data cleaning, preprocessing, exploratory data analysis, visualization, unsupervised learning, supervised machine learning, deep learning, and an integrative data-science capstone using Python**.
 
 ## 📌 Week 1 — Data Acquisition, Cleaning & Preprocessing
 
@@ -133,18 +133,53 @@ Output: 10 classes
 - Early stopping based on validation loss
 - Random seed: 42
 
-### Evaluation
-- Test accuracy
-- Classification metrics
-- Confusion matrix
-- Training/validation loss curves
-- Training/validation accuracy curves
-- Critical discussion of overfitting, resource constraints, limitations, and improvements
-
 ### Week 5 Files
-- `week5_deep_learning.py` — PyTorch neural-network implementation
-- `week5_requirements.txt` — Week 5 dependencies
-- `Week_5_Deep_Learning_Application_Report.docx` — detailed deep-learning report
+- `week5_deep_learning.py`
+- `week5_requirements.txt`
+- `Week_5_Deep_Learning_Application_Report.docx`
+
+---
+
+## 🏆 Week 6 — Integrative Capstone Project & Evaluation
+
+### Objective
+Combine the major data-science skills developed during the internship into one complete, reproducible Python pipeline covering data acquisition, preprocessing, EDA, supervised learning, unsupervised learning, evaluation, and recommendations.
+
+### Capstone Problem
+**Breast Cancer Diagnostic Analysis** — investigate whether numerical measurements of cell nuclei can support classification of observations as malignant or benign, while also exploring natural groupings in the feature space.
+
+### Dataset
+- **Dataset:** Breast Cancer Wisconsin (Diagnostic)
+- **Source:** Public dataset distributed through Scikit-learn
+- **Observations:** 569
+- **Predictor features:** 30 numerical measurements
+- **Target:** Malignant vs. Benign
+
+### Data Science Pipeline
+1. Public data acquisition
+2. Dataset structure and quality checks
+3. Missing-value and duplicate analysis
+4. Descriptive statistics
+5. Exploratory data analysis
+6. Correlation analysis
+7. Feature standardization where appropriate
+8. Logistic Regression classification
+9. Random Forest classification
+10. Five-fold stratified cross-validation
+11. Accuracy, precision, recall and F1 evaluation
+12. Confusion-matrix analysis
+13. K-Means clustering
+14. Silhouette-score selection of cluster count
+15. PCA visualization of clusters
+16. Insights, limitations and recommendations
+
+### Week 6 Files
+- `week6_capstone.py` — complete capstone implementation
+- `week6_requirements.txt` — Week 6 dependencies
+- `Week_6_Integrative_Capstone_Project_Report.docx` — detailed capstone report
+
+### Important Note
+The capstone dataset is a benchmark dataset for educational and analytical purposes. The resulting machine-learning models are **not intended for clinical diagnosis or real-world medical decision-making**. External validation, clinical expertise, calibration, and appropriate governance would be required before any medical application.
 
 ---
 
@@ -181,7 +216,11 @@ week1-data-cleaning-preprocessing/
 │
 ├── week5_deep_learning.py
 ├── week5_requirements.txt
-└── Week_5_Deep_Learning_Application_Report.docx
+├── Week_5_Deep_Learning_Application_Report.docx
+│
+├── week6_capstone.py
+├── week6_requirements.txt
+└── Week_6_Integrative_Capstone_Project_Report.docx
 ```
 
 ## ▶️ How to Run
@@ -216,12 +255,18 @@ pip install -r week5_requirements.txt
 python week5_deep_learning.py
 ```
 
+### Week 6
+```bash
+pip install -r week6_requirements.txt
+python week6_capstone.py
+```
+
 ## 📚 Project Purpose
 
-These projects demonstrate practical data-science and machine-learning skills, including data acquisition, data quality assessment, preprocessing, exploratory analysis, visualization, clustering, supervised classification, model validation, neural-network design, deep-learning training, evaluation, interpretation, and reproducible Python workflows.
+These projects demonstrate practical data-science and machine-learning skills, including data acquisition, data quality assessment, preprocessing, exploratory analysis, visualization, clustering, supervised classification, model validation, neural-network design, deep-learning training, end-to-end pipeline integration, evaluation, interpretation, and reproducible Python workflows.
 
 ## 👤 Author
 
 **Rizwan Saifi**
 
-Data Analytics Internship — Week 1 to Week 5
+Data Analytics Internship — Week 1 to Week 6
