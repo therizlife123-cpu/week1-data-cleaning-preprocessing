@@ -1,6 +1,6 @@
-# Data Analytics Internship Projects — Week 1, Week 2, Week 3 & Week 4
+# Data Analytics Internship Projects — Week 1 to Week 5
 
-This repository contains my internship assignments focused on **data cleaning, preprocessing, exploratory data analysis, visualization, unsupervised learning, and supervised machine learning using Python**.
+This repository contains my internship assignments focused on **data cleaning, preprocessing, exploratory data analysis, visualization, unsupervised learning, supervised machine learning, and deep learning using Python**.
 
 ## 📌 Week 1 — Data Acquisition, Cleaning & Preprocessing
 
@@ -8,21 +8,8 @@ This repository contains my internship assignments focused on **data cleaning, p
 Acquire a reliable public dataset, investigate its quality, clean inconsistencies, handle missing values and outliers, and prepare the data for further analysis and machine learning.
 
 ### Dataset
-- **Dataset:** UCI Adult Census Income Dataset
-- **Source:** UCI Machine Learning Repository
-- **Dataset page:** https://archive.ics.uci.edu/dataset/2/adult
-
-### Work completed
-- Dataset acquisition and initial inspection
-- Missing-value identification and treatment
-- Handling of `?` missing-value markers
-- Duplicate and consistency checks
-- Domain-validity checks
-- IQR-based outlier analysis
-- Categorical encoding strategy
-- Numerical scaling strategy
-- Final data-quality validation
-- Discussion of preprocessing impact and data leakage
+- UCI Adult Census Income Dataset
+- UCI Machine Learning Repository
 
 ### Week 1 Files
 - `week1_data_cleaning.py`
@@ -37,17 +24,14 @@ Acquire a reliable public dataset, investigate its quality, clean inconsistencie
 Explore a public dataset and use Python visualizations to identify trends, relationships, distributions, patterns, and potential anomalies.
 
 ### Dataset
-- **Dataset:** Iris Dataset
-- **Original source:** UCI Machine Learning Repository
-- **Reference:** Fisher, R. A. (1936), *The use of multiple measurements in taxonomic problems*
-- Distributed through `scikit-learn` for reproducibility.
+- Iris Dataset
+- UCI-origin dataset distributed through `scikit-learn`
 
 ### Work completed
-- Dataset structure and quality inspection
 - Descriptive statistics
-- Species/class distribution analysis
-- Grouped mean calculations
-- Scatter plots, bar charts, box plots, histograms
+- Class distribution analysis
+- Scatter plots and bar charts
+- Box plots and histograms
 - Correlation analysis
 - IQR-based anomaly screening
 - Interpretation of patterns and relationships
@@ -65,9 +49,9 @@ Explore a public dataset and use Python visualizations to identify trends, relat
 Apply unsupervised machine learning to discover meaningful groups and interpret their characteristics.
 
 ### Methodology
-- Standardized numerical features using `StandardScaler`
+- Standardized numerical features
 - Evaluated k = 2 through 8
-- Used the Elbow Method and Silhouette Score
+- Used Elbow Method and Silhouette Score
 - Applied K-Means with k = 3
 - Visualized clusters using PCA
 - Profiled cluster characteristics
@@ -83,37 +67,84 @@ Apply unsupervised machine learning to discover meaningful groups and interpret 
 ## 🎯 Week 4 — Supervised Learning Model Implementation
 
 ### Objective
-Build and evaluate a supervised classification model that predicts Iris species from flower measurements.
-
-### Problem Definition
-This is a **three-class classification problem**. The predictors are sepal length, sepal width, petal length, and petal width. The target is the Iris species.
+Build and evaluate supervised classification models that predict Iris species from flower measurements.
 
 ### Models
-- **Logistic Regression** — primary interpretable baseline
-- **Random Forest** — nonlinear comparison model
+- Logistic Regression
+- Random Forest
 
 ### Methodology
-- Created an 80/20 stratified train/test split
-- Applied `StandardScaler` to Logistic Regression through a pipeline
-- Used 5-fold stratified cross-validation
-- Evaluated accuracy, precision, recall, and F1-score
-- Generated confusion matrices
-- Compared model performance
-- Analyzed Random Forest feature importance
-- Discussed strengths, limitations, and possible improvements
-
-### Key Week 4 Findings
-- Both models provide strong classification performance on the Iris dataset.
-- Logistic Regression provides a simple and interpretable baseline.
-- Random Forest provides a flexible nonlinear alternative and feature-importance estimates.
-- Petal-related measurements are particularly useful for distinguishing the species.
-- Cross-validation was used to check that model performance was not dependent on a single train/test split.
-- Scaling was kept inside the Logistic Regression pipeline to reduce preprocessing leakage.
+- 80/20 stratified train/test split
+- Scaling through a Logistic Regression pipeline
+- Five-fold stratified cross-validation
+- Accuracy, precision, recall, F1-score
+- Confusion matrices
+- Random Forest feature importance
+- Strengths, limitations, and improvement discussion
 
 ### Week 4 Files
-- `week4_supervised_learning.py` — reproducible classification workflow
-- `week4_requirements.txt` — Week 4 dependencies
-- `Week_4_Supervised_Learning_Model_Implementation_Report.docx` — detailed supervised-learning report
+- `week4_supervised_learning.py`
+- `week4_requirements.txt`
+- `Week_4_Supervised_Learning_Model_Implementation_Report.docx`
+
+---
+
+## 🧠 Week 5 — Deep Learning Application in Data Science
+
+### Objective
+Design, train, validate, and evaluate a neural network using a popular deep-learning framework on a public dataset.
+
+### Problem
+**Handwritten digit classification** — predict digits 0 through 9 from 8×8 grayscale image data.
+
+### Dataset
+- **Dataset:** Scikit-learn Digits Dataset
+- **Observations:** 1,797
+- **Input:** 64 pixel features representing 8×8 images
+- **Classes:** 10 digit classes (0–9)
+
+### Framework
+- **PyTorch**
+
+### Neural Network Architecture
+```text
+Input: 64 pixels
+        ↓
+Dense: 128 neurons + ReLU
+        ↓
+Dropout: 0.25
+        ↓
+Dense: 64 neurons + ReLU
+        ↓
+Dropout: 0.20
+        ↓
+Output: 10 classes
+```
+
+### Training Approach
+- Pixel values scaled from 0–16 to approximately 0–1
+- 80/20 stratified train/test split
+- Additional validation split from training data
+- Adam optimizer
+- Learning rate: 0.001
+- Cross-entropy loss
+- Weight decay: 1e-4
+- Dropout regularization
+- Early stopping based on validation loss
+- Random seed: 42
+
+### Evaluation
+- Test accuracy
+- Classification metrics
+- Confusion matrix
+- Training/validation loss curves
+- Training/validation accuracy curves
+- Critical discussion of overfitting, resource constraints, limitations, and improvements
+
+### Week 5 Files
+- `week5_deep_learning.py` — PyTorch neural-network implementation
+- `week5_requirements.txt` — Week 5 dependencies
+- `Week_5_Deep_Learning_Application_Report.docx` — detailed deep-learning report
 
 ---
 
@@ -124,6 +155,7 @@ This is a **three-class classification problem**. The predictors are sepal lengt
 - NumPy
 - Matplotlib
 - Scikit-learn
+- PyTorch
 
 ## 📁 Repository Structure
 
@@ -145,10 +177,14 @@ week1-data-cleaning-preprocessing/
 │
 ├── week4_supervised_learning.py
 ├── week4_requirements.txt
-└── Week_4_Supervised_Learning_Model_Implementation_Report.docx
+├── Week_4_Supervised_Learning_Model_Implementation_Report.docx
+│
+├── week5_deep_learning.py
+├── week5_requirements.txt
+└── Week_5_Deep_Learning_Application_Report.docx
 ```
 
-## ▶️ How to Run the Projects
+## ▶️ How to Run
 
 ### Week 1
 ```bash
@@ -174,12 +210,18 @@ pip install -r week4_requirements.txt
 python week4_supervised_learning.py
 ```
 
+### Week 5
+```bash
+pip install -r week5_requirements.txt
+python week5_deep_learning.py
+```
+
 ## 📚 Project Purpose
 
-These projects demonstrate practical data-analytics and machine-learning skills, including data acquisition, data quality assessment, preprocessing, exploratory analysis, visualization, clustering, supervised classification, model validation, evaluation, interpretation, and reproducible Python workflows.
+These projects demonstrate practical data-science and machine-learning skills, including data acquisition, data quality assessment, preprocessing, exploratory analysis, visualization, clustering, supervised classification, model validation, neural-network design, deep-learning training, evaluation, interpretation, and reproducible Python workflows.
 
 ## 👤 Author
 
 **Rizwan Saifi**
 
-Data Analytics Internship — Week 1, Week 2, Week 3 & Week 4
+Data Analytics Internship — Week 1 to Week 5
